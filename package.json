@@ -1,0 +1,23 @@
+{
+  "name": "minimal-repro-parcel-nuvo",
+  "version": "1.0.0",
+  "description": "",
+  "source": "src/index.html",
+  "scripts": {
+    "dev": "parcel",
+    "clean": "rm -rf dist/*",
+    "build": "parcel build",
+    "serve": "http-server dist -o",
+    "repro": "npm run clean && npm run build && npm run serve"
+  },
+  "author": "Ali Smith <alasdair.smith@natcapresearch.com>",
+  "license": "MIT",
+  "devDependencies": {
+    "buffer": "^6.0.3",
+    "http-server": "^14.1.1",
+    "parcel": "^2.15.4"
+  },
+  "dependencies": {
+    "@getnuvo/importer-vanilla-js": "^3.4.1"
+  }
+}
