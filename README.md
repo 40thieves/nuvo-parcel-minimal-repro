@@ -19,3 +19,15 @@ Uncaught SyntaxError: Identifier 'r' has already been declared
 The Nuvo importer is also not initialised as expected.
 
 Running the same app using `npm run dev` will not have these behaviours.
+
+### Workaround
+
+The short term workaround we found was to add a `.terserrc` file to the root with the following config:
+
+```
+{
+    "mangle": {
+        "eval": true
+    }
+}
+```
